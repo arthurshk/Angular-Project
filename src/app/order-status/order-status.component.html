@@ -1,0 +1,11 @@
+<div>
+  <h1>Orders</h1>
+  <ul>
+    <li *ngFor="let order of ordersStatus">
+      {{ order.text }}
+      <span [ngClass]="{'green-text': order.status === 'Ordered and Shipped', 'red-text': order.status === 'Order in Progress'}">
+        - {{ order.status }}
+      </span>
+    </li>
+  </ul>
+</div>

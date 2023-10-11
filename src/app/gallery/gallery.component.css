@@ -1,0 +1,17 @@
+img{
+  margin: 10px;
+}
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+*{
+  background-color: antiquewhite;
+}
+.image-container p {
+  font-style: italic;
+  font-size: larger;
+  font-weight: bolder;
+}
