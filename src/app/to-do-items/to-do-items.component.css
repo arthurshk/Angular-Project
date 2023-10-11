@@ -1,0 +1,20 @@
+.items {
+  width: 300px;
+  padding: 0;
+  color: red;
+  list-style-type: none; }
+
+.items li {
+  border: 1px solid silver;
+  margin: 5px;
+  padding: 10px;
+}
+
+.items li.selected {
+  color: blue;
+  background-color: chartreuse;
+}
+
+.items li.selected:hover {
+  background-color: lightgoldenrodyellow;
+}

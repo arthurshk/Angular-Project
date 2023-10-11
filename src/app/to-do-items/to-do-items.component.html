@@ -1,0 +1,38 @@
+<!--<p>to-do-items works!</p>
+<h2>{{toDoItem.name}} Details</h2>
+<div><span>id: </span>{{toDoItem.id}}</div>
+<div><span>name:</span>{{toDoItem.name}}</div>
+<div><span>is complete: </span>{{toDoItem.isComplete}}</div>-->
+
+<ul class="items">
+  <li *ngFor="let item of items">
+    <input type="checkbox" [(ngModel)]="item.isComplete" (click)="onCheckBoxClick(item)">
+    {{ item.name }}
+  </li>
+</ul>
+
+<h2>{{ selectedItem.name }} Details</h2>
+<div>
+  <span>id: </span>{{ selectedItem.id }}
+</div>
+<div>
+  <span>name:</span>
+  <input [(ngModel)]="selectedName" placeholder="name">
+</div>
+<div>
+  <label>
+    <input type="checkbox" [(ngModel)]="selectedIsComplete"> Is Complete
+  </label>
+</div>
+
+<div *ngIf="items.length > 0">
+  {{items.length}} {{items.length == 1 ? 'item' : 'items'}}
+</div>
+
+<!--<div [ngSwitch]="cars">
+  <p *ngSwitchCase="audi">This is an Audi</p>
+  <p *ngSwitchCase="bmw">This is a bmw</p>
+  <p *ngSwitchCase="ford">This is a ford</p>
+  <p *ngSwitchCase="tesla">This is a Tesla</p>
+  <p *ngSwitchDefault>This is an auto</p>
+</div>-->
